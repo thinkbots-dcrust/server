@@ -1,7 +1,6 @@
 const route = require("express").Router();
+const Users = require("./users").route;
 
-route.get("/test", (req, res) => {
-	res.send("hii");
-});
+route.use("/users", Users);
 
 module.exports = { route };
